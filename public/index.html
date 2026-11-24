@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MediaGPT: AI Social Listening and Media Intelligence (MVP)</title>
+  <meta name="description" content="MediaGPT: AI-powered social listening and media intelligence. Monitor conversations, detect narratives, analyse sentiment, benchmark competitors, track influencers, ask the Intelligence Copilot and manage responses in one workspace." />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="layout">
+    <nav class="side" aria-label="Main">
+      <div class="brand"><img src="/favicon.svg" width="30" height="30" alt="" /><div>MediaGPT<small>AI media intelligence copilot</small></div></div>
+      <div class="sep">Listen</div>
+      <a href="#/overview" data-nav="overview"><span class="ni">◎</span> Overview</a>
+      <a href="#/mentions" data-nav="mentions"><span class="ni">☰</span> Mentions</a>
+      <div class="sep">Understand</div>
+      <a href="#/narratives" data-nav="narratives"><span class="ni">✦</span> Narratives</a>
+      <a href="#/competitors" data-nav="competitors"><span class="ni">⇅</span> Competitors</a>
+      <a href="#/influencers" data-nav="influencers"><span class="ni">★</span> Influencers</a>
+      <div class="sep">Detect &amp; investigate</div>
+      <a href="#/alerts" data-nav="alerts"><span class="ni">⚑</span> Alerts <span class="count" id="alertCount"></span></a>
+      <a href="#/copilot" data-nav="copilot"><span class="ni">✧</span> Copilot</a>
+      <div class="sep">Act &amp; measure</div>
+      <a href="#/cases" data-nav="cases"><span class="ni">▣</span> Cases <span class="count muted-count" id="caseCount"></span></a>
+      <a href="#/reports" data-nav="reports"><span class="ni">▤</span> Reports</a>
+      <a href="#/settings" data-nav="settings"><span class="ni">⚙</span> Settings &amp; governance</a>
+      <div class="side-foot"><span class="live-dot"></span> Always-on listening</div>
+    </nav>
+    <div class="main-wrap">
+      <header class="topbar">
+        <form id="searchForm" class="search" role="search"><input id="searchInput" type="search" placeholder="Search mentions, e.g. outage, privacy, #halvia5g" aria-label="Search mentions" /></form>
+        <div class="row">
+          <span id="aiBadge" class="ai-badge" title="Copilot engine"></span>
+          <label class="user-switch">Viewing as
+            <select id="userSelect" aria-label="Switch user (role-based access demo)"></select>
+          </label>
+        </div>
+      </header>
+      <main>
+        <div id="view" aria-live="polite"></div>
+      </main>
+    </div>
+  </div>
+  <div id="drawer" class="drawer" hidden><div class="drawer-panel" role="dialog" aria-modal="true"><button class="drawer-close" aria-label="Close">✕</button><div id="drawerBody"></div></div></div>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

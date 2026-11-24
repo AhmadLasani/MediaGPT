@@ -1,0 +1,35 @@
+{
+  "name": "mediagpt",
+  "version": "0.1.0",
+  "description": "MediaGPT: an AI-powered media intelligence copilot. Summarizes news and social coverage, runs sentiment analysis and semantic search, and answers questions through an evidence-grounded RAG copilot with citations.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test",
+    "reset": "node -e \"require('fs').rmSync('data/db.json',{force:true})\""
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "optionalDependencies": {
+    "@anthropic-ai/sdk": "^1.8.0"
+  },
+  "keywords": [
+    "media-intelligence",
+    "media-monitoring",
+    "ai-copilot",
+    "rag",
+    "llm",
+    "generative-ai",
+    "summarization",
+    "sentiment-analysis",
+    "semantic-search",
+    "narrative-intelligence",
+    "social-listening",
+    "claude"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
